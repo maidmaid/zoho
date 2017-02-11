@@ -97,7 +97,7 @@ class ZohoNormalizerTest extends \PHPUnit_Framework_TestCase
      */
     public function testDenormalizeWithErrorsInResponse()
     {
-        $data = array('response' => array('error' => array('message' => 'message error', 'code' => 666)));
+        $data = array('response' => array('error' => array('message' => 'message error', 'code' => 666), 'uri' => 'http://test.test'));
         $this->normalizer->denormalize($data, '', 'zoho');
     }
 
