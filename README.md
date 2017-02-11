@@ -23,7 +23,7 @@ use Maidmaid\Zoho\Client;
 $client = new Client('your_authtoken');
 ```
 
-See [Using Authentication Token in official doc](https://www.zoho.com/crm/help/api/using-authentication-token.html) for more infos.
+See [Using Authentication Token](https://www.zoho.com/crm/help/api/using-authentication-token.html) in official doc for more infos.
 
 ### Insert records
 
@@ -38,7 +38,7 @@ $records = $client->insertRecords($module = 'Contacts', $data = [
 );
 ```
 
-See [insertRecords Method in official doc](https://www.zoho.com/crm/help/api/insertrecords.html) for more infos.
+See [insertRecords Method](https://www.zoho.com/crm/help/api/insertrecords.html) in official doc for more infos.
 
 ### Update records
 
@@ -53,7 +53,7 @@ $records = $client->updateRecords($module, $data = [
 ]);
 ```
 
-See [updateRecords Method in official doc](https://www.zoho.com/crm/help/api/updaterecords.html) for more infos.
+See [updateRecords Method](https://www.zoho.com/crm/help/api/updaterecords.html) in official doc for more infos.
 
 ### Delete records
 
@@ -63,7 +63,7 @@ See [updateRecords Method in official doc](https://www.zoho.com/crm/help/api/upd
 $client->deleteRecords($module = 'Contacts', 'the_ID');
 ```
 
-See [deleteMethod Method in official doc](https://www.zoho.com/crm/help/api/deleterecords.html) for more infos.
+See [deleteMethod Method](https://www.zoho.com/crm/help/api/deleterecords.html) in official doc for more infos.
 
 ### Get record by ID
 
@@ -73,7 +73,7 @@ See [deleteMethod Method in official doc](https://www.zoho.com/crm/help/api/dele
 $records = $client->getRecordById($module = 'Contacts', ['the_ID_1', 'the_ID_2'])
 ```
 
-See [getRecordById Method in official doc](https://www.zoho.com/crm/help/api/getrecordbyid.html) for more infos.
+See [getRecordById Method](https://www.zoho.com/crm/help/api/getrecordbyid.html) in official doc for more infos.
 
 ### Get records
 
@@ -94,7 +94,7 @@ while ($records = $client->getRecords($module = 'Contacts', ++$page)) {
 }
 ```
 
-See [getRecords Method in official doc](https://www.zoho.com/crm/help/api/getrecords.html) for more infos.
+See [getRecords Method](https://www.zoho.com/crm/help/api/getrecords.html) in official doc for more infos.
 
 ### Search records
 
@@ -114,7 +114,7 @@ See [searchRecords Method in official doc](https://www.zoho.com/crm/help/api/sea
 $fields = $client->getFields($module = 'Contacts');
 ```
 
-See [getFields Method in official doc](https://www.zoho.com/crm/help/api/getfields.html) for more infos.
+See [getFields Method](https://www.zoho.com/crm/help/api/getfields.html) in official doc for more infos.
 
 ### Generic call
 
