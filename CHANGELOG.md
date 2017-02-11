@@ -1,4 +1,4 @@
 Changelog
 =========
 
-Official API doc : https://www.zoho.com/crm/help/api/
+- 0.1.0 (11.02.2017): first version
