@@ -70,7 +70,7 @@ See [deleteMethod Method in official doc](https://www.zoho.com/crm/help/api/dele
 > To retrieve individual records by record ID
 
 ```php
-$client->getRecordById($module=  'Contacts', ['the_ID_1', 'the_ID_2'])
+$records = $client->getRecordById($module = 'Contacts', ['the_ID_1', 'the_ID_2'])
 ```
 
 See [getRecordById Method in official doc](https://www.zoho.com/crm/help/api/getrecordbyid.html) for more infos.
@@ -82,14 +82,14 @@ See [getRecordById Method in official doc](https://www.zoho.com/crm/help/api/get
 Fetch data from first page:
 
 ```php
-$client->getRecords($module=  'Contacts')
+$records = $client->getRecords($module = 'Contacts')
 ```
 
 Fetch data with pagination:
 
 ```php
 $page = 0;
-while ($modules = $client->getRecords($module = 'Contacts', ++$page)) {
+while ($records = $client->getRecords($module = 'Contacts', ++$page)) {
 
 }
 ```
