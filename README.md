@@ -104,7 +104,7 @@ See [getRecords Method](https://www.zoho.com/crm/help/api/getrecords.html) in of
 $records = $client = searchRecords($module = 'Contacts', $criteria = ['Last Name' => 'Holmes']);
 ```
 
-See [searchRecords Method in official doc](https://www.zoho.com/crm/help/api/searchrecords.html) for more infos.
+See [searchRecords Method](https://www.zoho.com/crm/help/api/searchrecords.html) in official doc for more infos.
 
 ### Get fields
 
