@@ -111,7 +111,7 @@ See [searchRecords Method in official doc](https://www.zoho.com/crm/help/api/sea
 > To retrieve details of fields available in a module.
 
 ```php
-$client->getFields($module = 'Contacts');
+$fields = $client->getFields($module = 'Contacts');
 ```
 
 See [getFields Method in official doc](https://www.zoho.com/crm/help/api/getfields.html) for more infos.
