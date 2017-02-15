@@ -1,7 +1,7 @@
 Zoho
 ====
 
-[Zoho](https://www.zoho.com) client library.
+[Zoho](https://www.zoho.com) client library. Require PHP >= 5.5.
 
 [![Build Status](https://travis-ci.org/maidmaid/zoho.svg?branch=master)](https://travis-ci.org/maidmaid/zoho)
 [![Latest Stable Version](https://poser.pugx.org/maidmaid/zoho/v/stable)](https://packagist.org/packages/maidmaid/zoho)
@@ -101,7 +101,7 @@ See [getRecords Method](https://www.zoho.com/crm/help/api/getrecords.html) in of
 > To retrieve the records that match your search criteria.
 
 ```php
-$records = $client = searchRecords($module = 'Contacts', $criteria = ['Last Name' => 'Holmes']);
+$records = $client->searchRecords($module = 'Contacts', $criteria = ['Last Name' => 'Holmes']);
 ```
 
 See [searchRecords Method](https://www.zoho.com/crm/help/api/searchrecords.html) in official doc for more infos.
@@ -119,7 +119,7 @@ See [getFields Method](https://www.zoho.com/crm/help/api/getfields.html) in offi
 ### Generic call
 
 ```php 
-$result = $client->call($module, $method, $params = array(), $data = array())
+$result = $client->call($module, $method, $params, $data)
 ```
 
 ### Check errors
@@ -127,7 +127,7 @@ $result = $client->call($module, $method, $params = array(), $data = array())
 You can get last errors on failed process records:
 
 ```php
-$client->getLastErrors();
+$errors = $client->getLastErrors();
 ```
 
 All calls thrown an exception if global response fails (e.g. if API key is wrong): 
@@ -135,7 +135,8 @@ All calls thrown an exception if global response fails (e.g. if API key is wrong
 ```php
 try {
     $results = $client->updateRecords('Contacts', $updates = []);
-} catch (ZohoCRMException $e) {}
+} catch (ZohoCRMException $e) {
+}
 ```
 
 ## Licence
