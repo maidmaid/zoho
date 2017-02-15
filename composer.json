@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "php": ">=5.5",
         "guzzlehttp/guzzle": "^6.0",
         "symfony/serializer": "^2.3|^3.0"
     },
