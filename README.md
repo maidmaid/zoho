@@ -1,7 +1,7 @@
 Zoho
 ====
 
-[Zoho](https://www.zoho.com) client library. Require PHP >= 5.5.
+[Zoho](https://www.zoho.com) client library. Require PHP >= 5.6.
 
 [![Build Status](https://travis-ci.org/maidmaid/zoho.svg?branch=master)](https://travis-ci.org/maidmaid/zoho)
 [![Latest Stable Version](https://poser.pugx.org/maidmaid/zoho/v/stable)](https://packagist.org/packages/maidmaid/zoho)
@@ -101,7 +101,7 @@ See [getRecords Method](https://www.zoho.com/crm/help/api/getrecords.html) in of
 > To retrieve the records that match your search criteria.
 
 ```php
-$records = $client->searchRecords($module = 'Contacts', $criteria = ['Last Name' => 'Holmes']);
+$records = $client->searchRecords($module = 'Contacts', $criteria = '(Last Name:Holmes)']);
 ```
 
 See [searchRecords Method](https://www.zoho.com/crm/help/api/searchrecords.html) in official doc for more infos.
