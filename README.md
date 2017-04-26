@@ -101,7 +101,7 @@ See [getRecords Method](https://www.zoho.com/crm/help/api/getrecords.html) in of
 > To retrieve the records that match your search criteria.
 
 ```php
-$records = $client->searchRecords($module = 'Contacts', $criteria = ['Last Name' => 'Holmes']);
+$records = $client->searchRecords($module = 'Contacts', $criteria = '(Last Name:Holmes)']);
 ```
 
 See [searchRecords Method](https://www.zoho.com/crm/help/api/searchrecords.html) in official doc for more infos.
