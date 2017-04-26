@@ -9,7 +9,7 @@ sudo: false
 install:
   - composer update --prefer-dist --no-interaction --prefer-stable
 
-script: phpunit
+script: vendor/bin/phpunit
 
 matrix:
   include:
