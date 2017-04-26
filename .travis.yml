@@ -7,22 +7,12 @@ cache:
 sudo: false
 
 install:
-  - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable; fi
-  - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable; fi
+  - composer update --prefer-dist --no-interaction --prefer-stable
 
-script: phpunit --verbose --coverage-text
+script: phpunit
 
 matrix:
   include:
-    - php: 5.5
-      env: setup=lowest
-    - php: 5.5
-      env: setup=stable
     - php: 5.6
-      env: setup=lowest
-    - php: 5.6
-      env: setup=stable
     - php: 7.0
-      env: setup=lowest
-    - php: 7.0
-      env: setup=stable
+    - php: 7.1
