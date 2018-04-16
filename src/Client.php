@@ -31,7 +31,7 @@ class Client
 
         // Set basic options
         $options = array(
-            'base_uri' => $this->uri.'/crm/private/json/', #https://crm.zoho.com or https://crm.zoho.eu
+            'base_uri' => $this->uri.'/crm/private/json/', //https://crm.zoho.com or https://crm.zoho.eu
             'query' => array_merge(array(
                 'authtoken' => $this->authtoken,
                 'scope' => 'crmapi',
