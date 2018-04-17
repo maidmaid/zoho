@@ -27,8 +27,9 @@ class ZohoEncoder implements DecoderInterface, EncoderInterface
     public function encode($data, $format, array $context = array())
     {
         $encoded = $this->xmlEncoder->encode($data, $format, array('xml_root_node_name' => $context['module']));
+        $encoded = preg_replace('/<\?xml.*\?>\n+/', '', $encoded);
 
-        return explode("\n", $encoded)[1];
+        return $encoded;
     }
 
     /**
