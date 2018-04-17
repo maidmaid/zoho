@@ -13,14 +13,16 @@ class Client
 {
     protected $client;
     protected $authtoken;
+    protected $uri;
     protected $serializer;
     protected $lastErrors;
 
-    public function __construct($authtoken, ClientInterface $client = null, SerializerInterface $serializer = null)
+    public function __construct($authtoken, ClientInterface $client = null, SerializerInterface $serializer = null, $uri = 'https://crm.zoho.com')
     {
         $this->authtoken = $authtoken;
         $this->serializer = $serializer ?: new Serializer(array(new ZohoNormalizer()), array(new ZohoEncoder()));
         $this->client = $client ?: new GuzzleClient();
+        $this->uri = $uri;
     }
 
     public function call($module, $method, $params = array(), $data = array())
@@ -29,7 +31,7 @@ class Client
 
         // Set basic options
         $options = array(
-            'base_uri' => 'https://crm.zoho.com/crm/private/json/',
+            'base_uri' => $this->uri.'/crm/private/json/', //https://crm.zoho.com or https://crm.zoho.eu
             'query' => array_merge(array(
                 'authtoken' => $this->authtoken,
                 'scope' => 'crmapi',
